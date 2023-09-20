@@ -178,11 +178,19 @@ class BookLibrary {
     }
 
     saveBooks() {
+        const number = /[0-9]/;
+        const alphabet=/[a-z]/
         this.formBook.addEventListener("submit", (e) => {
             e.preventDefault();
             if(e.target.bookTitle.value === "" || e.target.bookAuthor.value === "" || e.target.published.value === "" || e.target.bookGenre.value === "") {
                 alert("Please Fill the Form");
-            }
+            }else if(number.test(e.target.bookGenre.value)){
+                alert("The book genre must be text")
+                e.target.bookGenre.value = "";
+            }else if(alphabet.test(e.target.published.value)){
+                alert("The book year must be number");
+                e.target.published.value = "";
+            }else{
             this.arrayBooks.push({
                 id: `${Date.now()}`,
                 bookTitle: e.target.bookTitle.value,
@@ -202,6 +210,7 @@ class BookLibrary {
             this.handleSearch()
             this.handleDelete()
             this.handleEdit();
+        }
         })
     }
 }
