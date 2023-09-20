@@ -56,6 +56,8 @@ class BookLibrary {
         }
     }
     ruleFormEdit(item) {
+        const number = /[0-9]/;
+        const alphabet = /[a-zA-Z]/;
         this.arrayBooks=JSON.parse(localStorage.getItem("arrayBooks"));
         const formEdit=document.querySelector(".form-edit");
         formEdit.style.transform="translateY(0)"
@@ -78,6 +80,15 @@ class BookLibrary {
         })
         formEdit.addEventListener("submit",(e)=>{
             e.preventDefault();
+            if(e.target.bookTitle.value === "" || e.target.bookAuthor.value === "" || e.target.published.value === "" || e.target.bookGenre.value === ""){
+                alert("Please Fill the Form");
+            }else if(number.test(e.target.bookGenre.value)){
+                e.target.bookGenre.value = "";
+                alert("The book genre must be text")
+            }else if(alphabet.test(e.target.published.value)){
+                e.target.published.value = "";
+                alert("The book year must be number");
+            }else{
             const indexBook=this.arrayBooks.findIndex((book)=>book.id===item.id)  
             this.arrayBooks[indexBook].bookTitle=e.target.bookTitle.value;
             this.arrayBooks[indexBook].bookAuthor=e.target.bookAuthor.value;
@@ -91,6 +102,7 @@ class BookLibrary {
                 formEdit.style.transform = "0";
             },500)
             this.handleDisabeledCheck()
+            }
         })
     }
     
@@ -179,7 +191,7 @@ class BookLibrary {
 
     saveBooks() {
         const number = /[0-9]/;
-        const alphabet=/[a-z]/
+        const alphabet=/[a-zA-Z]/
         this.formBook.addEventListener("submit", (e) => {
             e.preventDefault();
             if(e.target.bookTitle.value === "" || e.target.bookAuthor.value === "" || e.target.published.value === "" || e.target.bookGenre.value === "") {
