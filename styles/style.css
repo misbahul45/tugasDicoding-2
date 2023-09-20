@@ -1,0 +1,323 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+header{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(255, 13, 13);
+}
+header h1{
+    color: aliceblue;
+}
+
+main{
+    background-color: rgba(114, 247, 247, 0.509);
+    display: flex;
+    flex-direction: column;
+}
+main .top-content{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+.top-content h1{
+    color: purple;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.top-content form{
+    width: 500px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 45px 40px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.416);
+    background: url('../img/bg.webp')no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+form .book{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.book .books{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+.books label{
+    color: black;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.books input{
+    width: 100%;
+    padding: 7px 15px;
+    letter-spacing: 0.5px;
+    font-weight: 550;
+    border-radius: 10px;
+    border: 1px solid blue;
+    box-shadow: 5px 5px 6px rgba(19, 13, 13, 0.489);
+}
+.books input::placeholder{
+    color: darkblue
+}
+.books input:focus{
+    background-color: aqua;
+    color: darkblue;
+    outline: 2px solid orange;
+    opacity: 0.9;
+}
+.books input:focus::placeholder{
+    color: darkblue;
+}
+form .book-genre{
+    width: 100%;
+}
+.book-genre select{
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 7px;
+    font-weight: 650;
+    box-shadow: 5px 5px 6px rgba(19, 13, 13, 0.489);
+}
+
+.book-year input{
+    width: 100%;
+}
+form .check{
+    margin-right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 7px;
+}
+.check label{
+    font-size: 20px;
+    color:red;
+    font-weight: 650;
+    text-shadow: 1px 1px 1px white;
+}
+.check input{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+form button{
+    padding:7px 10px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgba(245, 12, 0, 0.8);
+    color: aliceblue;
+    font-weight: 750;
+    border:none;
+    cursor: pointer;
+    box-shadow: 5px 5px 6px rgba(19, 13, 13, 0.489);
+}
+form button:hover{
+    background-color: red;
+}
+form button:active{
+    opacity: 0.5;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: aqua;
+}
+.bottom{
+    height: auto;
+    padding: 20px ;
+    width: 100%;
+    text-align: center;
+}
+.bottom input{
+    width: 400px;
+    padding: 7px 15px;
+    letter-spacing: 0.5px;
+    font-weight: 550;
+    border-radius: 10px;  
+    box-shadow: 5px 5px 6px rgba(19, 13, 13, 0.489);
+}
+.raks{
+    padding: 20px ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.raks .ends-books{
+    padding: 10px 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color:brown;
+    border-radius: 25px;
+    box-shadow: inset 30px 20px 20px rgba(0, 0, 0, 0.436),inset -30px -20px 20px rgba(0, 0, 0, 0.436);
+}
+.read-books{
+    padding: 10px 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.196);
+}
+.book-raks{
+    padding: 20px 15px;
+    flex: 1;
+    min-width: 250px;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aqua;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 17px rgba(0, 0, 0, 0.363);
+}
+.file-title h1{
+    text-transform: capitalize;
+    font-weight:bolder;
+    font-size: 25px;
+    color: red;
+}
+.book-raks p{
+    color: darkblue;
+    text-align: start;
+    font-size: 20px;
+}
+.book-check{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.book-raks .book-check input{
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.book-raks 
+.book-check i{
+    font-size: 40px;
+    color: red;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.461);
+    cursor: pointer;
+}
+.book-check .checklist{
+    position: absolute;
+    font-size: 20px;
+    top: -45px;
+    left: -35px;
+    background-color: green;
+    color: white;
+    padding: 10px ;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.24);
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+}
+.book-check .check-input:hover .checklist{
+    transform: scale(1);
+}
+.book-check .del p{
+    position: absolute;
+    top: -40px;
+    right: 2px;
+    background-color: red;
+    font-size: 15px;
+    color: white;
+    padding: 10px ;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.24);
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+}
+.del:hover p{
+    transform: scale(1);
+}
+.book-check .edit p{
+    position: absolute;
+    top: -45px;
+    background-color: red;
+    font-size: 15px;
+    color: white;
+    padding: 10px ;
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.24);
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+}
+.edit:hover p{
+    transform: scale(1);
+}
+
+.form-edit{
+    width: 50%;
+    min-width: 400px;
+    position: fixed;
+    top: 30%;
+    left: 25vw;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(15px);
+    background-color: rgba(43, 110, 168, 0.516);
+    padding: 25px;
+    border-radius: 10px;
+    z-index: 10;
+    transform: translateY(-800px)scale(0);
+    transition: all 0.5s ease-in-out;
+}
+.form-edit .check{
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+.form-edit .close{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 15px;
+}
+.close i{
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.close i:hover{
+    transform: scale(1.5);
+}
+@media screen and (max-width: 680px) {
+    .form-edit{
+        left: 12vw;
+    }
+}

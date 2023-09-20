@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Library Book</h1>
+    </header>
+    <main>
+        <form class="form-edit">
+            <div class="close">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="book">
+                  <div class="books">
+                      <label for="bookTitle">Tittle</label>
+                      <input type="text" placeholder="Book Title" id="bookTitle" name="bookTitle">
+                  </div>
+                  <div class="books">
+                      <label for="bookAuthor">Author</label>
+                      <input type="text" placeholder="Name Of Author" id="bookAuthor" name="bookAuthor">
+                  </div>
+            </div>
+            <div class="book">
+              <div class="books">
+                  <label for="genre">Genre</label>
+                  <input type="text" placeholder="Book Genre" id="genre" name="bookGenre">
+              </div>
+            </div>
+            <div class="book">
+                  <div class="books">
+                      <label for="published">Year</label>
+                      <input type="text" placeholder="Year Published" id="published" name="published">
+                  </div>
+            </div>
+            <div class="check">
+              <label for="check">Finished Reading</label>
+              <input type="checkbox" name="endCheck" id="check">
+            </div>
+            <button type="submit">Save Edit</button>
+          </form>
+
+
+        <div class="top-content">
+            <h1>Add New Book</h1>
+            <form class="form-book">
+              <div class="book">
+                    <div class="books">
+                        <label for="bookTitle">Tittle</label>
+                        <input type="text" placeholder="Book Title" id="bookTitle" name="bookTitle">
+                    </div>
+                    <div class="books">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" placeholder="Name Of Author" id="bookAuthor" name="bookAuthor">
+                    </div>
+              </div>
+              <div class="book">
+                <div class="books">
+                    <label for="genre">Genre</label>
+                    <input type="text" placeholder="Book Genre" id="genre" name="bookGenre">
+                </div>
+              </div>
+              <div class="book">
+                    <div class="books">
+                        <label for="published">Year</label>
+                        <input type="text" placeholder="Year Published" id="published" name="published">
+                    </div>
+              </div>
+              <div class="check">
+                <label for="check">Finished Reading</label>
+                <input type="checkbox" name="endCheck" id="check">
+              </div>
+              <button type="submit">New Book</button>
+            </form>
+        </div>
+        <div class="bottom">
+            <input type="text" placeholder="Search Books" class="search-input">
+            <div class="raks">
+                <h1>End</h1>
+                <div class="ends-books">            
+                </div>
+                <h1>In Progress</h1>
+                <div class="read-books">
+                </div>          
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Misbahul Book.</p>
+    </footer>
+
+    <script src="./javascript/main.js"></script>
+</body>
+</html>
