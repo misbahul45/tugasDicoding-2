@@ -123,7 +123,6 @@ class BookLibrary {
             if (e.target.type === "checkbox") {
                 const bookId = e.target.id;
                 const bookIndex=newArrayBooks.findIndex((book)=>book.id===bookId);
-                console.log(bookIndex)
                 if(bookIndex!==-1){
                     newArrayBooks[bookIndex].isFinished=true;
                     localStorage.setItem("arrayBooks", JSON.stringify(newArrayBooks));
